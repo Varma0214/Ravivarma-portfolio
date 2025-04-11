@@ -1,0 +1,147 @@
+.about {
+  background: linear-gradient(135deg, #1A1D3A, #2A2D5A);
+  padding-top: 120px; 
+  border-top: none;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #FFD700, #FF6F61);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 50px;
+  animation: slideIn 1s ease-out;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.profile-pic {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid transparent;
+  background: linear-gradient(45deg, #FF6F61, #FFD700) border-box;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 111, 97, 0.5);
+}
+
+.about-text h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #F5F5F5;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #B0B0B0;
+  margin-bottom: 25px;
+}
+
+.about-text h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #FFD700;
+  margin: 25px 0 15px;
+}
+
+.about-text ul {
+  list-style: none;
+}
+
+.about-text ul li {
+  font-size: 1.2rem;
+  color: #B0B0B0;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 25px;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.about-text ul li::before {
+  content: '★';
+  color: #FF6F61;
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p,
+  .about-text ul li {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about h2 {
+    font-size: 2.2rem;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-text h3 {
+    font-size: 1.6rem;
+  }
+
+  .about-text p,
+  .about-text ul li {
+    font-size: 1rem;
+  }
+}

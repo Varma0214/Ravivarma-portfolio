@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1A1D3A;
+    color: #F5F5F5;
+    overflow-x: hidden;
+  }
+  
+  .app {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* General section styling */
+  section {
+    padding: 80px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(180deg, #1A1D3A, #2A2D5A);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    section {
+      padding: 60px 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    section {
+      padding: 40px 10px;
+    }
+  }
